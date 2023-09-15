@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: verdana;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* header styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+  align-items: baseline;
+  z-index: 2;
+}
+
+label {
+  padding: 1em;
+}
+
+nav {
+  align-self: flex-end;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+nav > ul > li {
+  padding: 1em;
+  background-color: white;
+  margin-left: 0.5em;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 0.15em;
+  width: 0;
+  left: 0;
+  bottom: -0.5em;
+  transition: 0.5s;
+}
+nav > ul > li > a:hover::after {
+  width: 100%;
+}
+
+#nav-btn {
+  display: none;
+  align-self: flex-end;
+  margin-top: -2em;
+  transition-property: all;
+  transition-duration: 0.9s;
+  margin-left: 20em;
+}
+
+#close {
+  display: none;
+}
+
+.rotate {
+  transform: rotateY(-180deg);
+}
+
+#mode {
+  width: 50px;
+  height: fit-content;
+}
+
+#mode > i {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#light {
+  display: none;
+}
+
+/* end of header styles */
+
+/* main styles */
+
+main {
+  margin-top: 80px;
+  margin-left: 16%;
+  margin-right: 16%;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.intro {
+  padding: 1em;
+  border: 1px solid red;
+  width: 50%;
+  margin-top: 5em;
+}
+
+.intro >p {
+  padding-top: 1em;
+  padding-bottom:1em ;
+}
+
+.intro > h1 {
+  font-size: 4em;
+}
+
+/* end of main styles */
+
+
+/* Media Querries */
+@media only screen and (max-width: 767px) {
+  nav > ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 100%;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  nav > ul > li {
+    padding: 0.5em;
+    background-color: white;
+    margin: 0.5em;
+  }
+  .collapse {
+    left: 70%;
+  }
+  #nav-btn {
+    display: flex;
+  }
+  .introduction {
+    flex-direction: column-reverse;
+  }
+}
+
+/* end of media querries */
