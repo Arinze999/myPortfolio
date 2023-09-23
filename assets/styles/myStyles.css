@@ -78,9 +78,7 @@ nav > ul > li > a:hover::after {
   margin-left: 13em;
 }
 
-#close {
-  display: none;
-}
+
 
 .rotate {
   transform: rotateY(-180deg);
@@ -292,7 +290,7 @@ article {
     box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.1);
     z-index: 2;
     background-color: white;
-    margin-top: 3em;
+    top: 0;
   }
   nav > ul > li {
     padding: 0.5em;
@@ -300,12 +298,12 @@ article {
     margin: 0.5em;
   }
   .collapse {
-    left: 74%;
+    left: 60%;
   }
   #nav-btn {
     display: flex;
-    z-index: 100;
-    position: relative;
+    position: absolute;
+    left: 50%;
   }
   .introduction {
     flex-direction: column-reverse;
