@@ -278,6 +278,10 @@ article {
   
 }
 
+#nav-btnClose {
+  display: none;
+}
+
 /* end of main styles */
 
 /* Media Querries */
@@ -303,7 +307,10 @@ article {
   #nav-btn {
     display: flex;
     position: absolute;
-    left: 50%;
+    left: 0;
+  }
+  #nav-btnClose {
+    display: initial;
   }
   .introduction {
     flex-direction: column-reverse;
