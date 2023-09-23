@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   position: relative;
   font-family: verdana;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -17,10 +18,12 @@ header {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  z-index: -1;
+  justify-content: space-between;
   align-items: baseline;
   z-index: 2;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  background-color: white;
 }
 
 label {
@@ -28,9 +31,11 @@ label {
 }
 
 nav {
+  margin-right: 4em;
   align-self: flex-end;
   transition-property: all;
   transition-duration: 0.5s;
+  z-index: 2;
 }
 nav > ul {
   list-style-type: none;
@@ -70,7 +75,7 @@ nav > ul > li > a:hover::after {
   margin-top: -2em;
   transition-property: all;
   transition-duration: 0.9s;
-  margin-left: 20em;
+  margin-left: 13em;
 }
 
 #close {
@@ -95,19 +100,36 @@ nav > ul > li > a:hover::after {
   display: none;
 }
 
+.icon-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.fa-solid {
+  margin-right: 0.3em;
+}
+
 /* end of header styles */
 
 /* main styles */
 
 main {
-  margin-top: 80px;
-  margin-left: 16%;
-  margin-right: 16%;
+  background-color: rgba(147, 184, 211, 0.1);
+  margin-top: 93px;
+  height: fit-content;
+  padding: 5em;
+  padding-top: 7em;
+}
+
+article {
 }
 
 .introduction {
+  margin-left: 16em;
+  margin-right: 10em;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .introduction > :nth-child(2) {
@@ -116,26 +138,149 @@ main {
   align-items: center;
 }
 
-
-
 .intro {
   padding: 1em;
-  border: 1px solid red;
+  flex-wrap: wrap;
   width: 50%;
-  margin-top: 5em;
 }
 
-.intro >p {
+.intro > p {
   padding-top: 1em;
-  padding-bottom:1em ;
+  padding-bottom: 1em;
+}
+
+.intro > h1 {
+  color: rgb(8, 51, 112);
+}
+
+.intro > p > strong {
+  color: rgb(15, 104, 226);
 }
 
 .intro > h1 {
   font-size: 4em;
 }
 
-/* end of main styles */
+.img {
+  width: 50%;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  min-width: 240px;
+  max-width: 241px;
+  position: relative;
+}
 
+.introduction::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  right: 100%;
+  top: 90%;
+  position: absolute;
+  border-radius: 10px;
+  /* border: 2px solid red; */
+  border-left: 0.5em solid rgb(8, 51, 112);
+  border-bottom: 0.5em solid rgb(8, 51, 112);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.introduction::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  right: 5%;
+  top: -3%;
+  position: absolute;
+  border-radius: 10px;
+  /* border: 2px solid red; */
+  border-right: 0.5em solid rgb(8, 51, 112);
+  border-top: 0.5em solid rgb(8, 51, 112);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+
+.img > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: none;
+}
+
+.stack {
+  display: flex;
+  align-items: baseline;
+  
+}
+
+.stack > h3 {
+  padding: 0.5em;
+  border-right: 2px solid black;
+}
+
+.stack > ul {
+  display: flex;
+  list-style-type: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stack > ul > li {
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-property: all;
+  transition-duration: 0.5s;
+  border-radius: 5px;
+}
+
+.stack > ul > li:hover {
+  transform: translateY(-16%);
+  box-shadow: -1px 22px 19px -15px rgba(0, 0, 0, 0.75);
+}
+
+.stack > ul > li > span {
+  margin-top: 1em;
+}
+
+.stack-article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.html {
+  color: rgb(255, 109, 0);
+}
+
+.css {
+  color: rgb(57, 158, 214);
+}
+
+.js {
+  color: rgb(247, 223, 30);
+}
+
+.bootstrap {
+  color: rgb(108, 25, 255);
+}
+
+.react {
+  color: rgb(83, 193, 222);
+}
+.about-me {
+  width: 100%;
+  
+}
+
+/* end of main styles */
 
 /* Media Querries */
 @media only screen and (max-width: 767px) {
@@ -146,6 +291,8 @@ main {
     left: 100%;
     box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.1);
     z-index: 2;
+    background-color: white;
+    margin-top: 3em;
   }
   nav > ul > li {
     padding: 0.5em;
@@ -153,14 +300,92 @@ main {
     margin: 0.5em;
   }
   .collapse {
-    left: 70%;
+    left: 74%;
   }
   #nav-btn {
     display: flex;
+    z-index: 100;
+    position: relative;
   }
   .introduction {
     flex-direction: column-reverse;
+    margin-left: 0;
+    margin-right: 0;
   }
+  .intro {
+    width: 100%;
+    margin-top: 0;
+  }
+  .intro > h1 {
+    padding: 0.3em;
+  }
+  main {
+    margin-top: 95px;
+    padding: 1em;
+    height: fit-content;
+  }
+  article {
+    text-align: center;
+  }
+  .stack {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .stack > h3 {
+    border-right: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 1em;
+  }
+  .introduction::after {
+    display: none;
+  }
+  .introduction::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .introduction {
+    flex-direction: column-reverse;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .intro {
+    width: 100%;
+    margin-top: 0;
+  }
+  .intro > h1 {
+    padding: 0.3em;
+  }
+  main {
+    margin-top: 95px;
+    padding: 1em;
+    height: fit-content;
+  }
+  article {
+    text-align: center;
+  }
+  .introduction::after {
+    display: none;
+  }
+  .introduction::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .introduction {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .introduction::after {
+    display: none;
+  }
+  .introduction::before {
+    display: none;
+  }
+
 }
 
 /* end of media querries */

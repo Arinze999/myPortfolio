@@ -17,11 +17,11 @@ navButton.addEventListener("click", () => {
 
 LighDarkMode.addEventListener("click", () => {
     if (Light.style.display == "none") {
-        Light.style.display = "initial"
+        Light.style.display = "flex"
         Dark.style.display = "none";
     }
     else {
-        Dark.style.display = "initial"; 
+        Dark.style.display = "flex"; 
         Light.style.display = "none" 
     }
 });
