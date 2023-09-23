@@ -307,7 +307,7 @@ article {
   #nav-btn {
     display: flex;
     position: absolute;
-    right: 20%;
+    right: 5%;
   }
   #nav-btnClose {
     display: initial;
