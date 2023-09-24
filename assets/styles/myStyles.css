@@ -343,8 +343,8 @@ nav > ul > li > a:hover::after {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  min-width: 400px;
-  max-width: 401px;
+  min-width: 350px;
+  max-width: 370px;
 }
 
 /* end of .main-1 styles */
