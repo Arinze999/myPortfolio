@@ -12,6 +12,15 @@ body {
   padding: 0;
 }
 
+p {
+  font-size: 1.1em;
+  color: rgb(85, 85, 100);
+}
+
+i {
+  color: rgb(8, 41, 86);
+}
+
 /* header styles */
 header {
   position: fixed;
@@ -28,6 +37,10 @@ header {
 
 label {
   padding: 1em;
+}
+
+label > h2 {
+  color: rgb(8, 41, 86);
 }
 
 nav {
@@ -52,13 +65,18 @@ nav > ul > li {
 }
 nav > ul > li > a {
   text-decoration: none;
-  color: black;
+  color: rgb(8, 41, 86);
   position: relative;
 }
+
+nav > ul > li > a:hover {
+  color: rgb(15, 104, 226);
+}
+
 nav > ul > li > a::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: rgb(15, 104, 226);
   height: 0.15em;
   width: 0;
   left: 0;
@@ -77,8 +95,6 @@ nav > ul > li > a:hover::after {
   transition-duration: 0.9s;
   margin-left: 13em;
 }
-
-
 
 .rotate {
   transform: rotateY(-180deg);
@@ -109,17 +125,14 @@ nav > ul > li > a:hover::after {
 
 /* end of header styles */
 
-/* main styles */
+/* .main-1 styles */
 
-main {
+.main-1 {
   background-color: rgba(147, 184, 211, 0.1);
   margin-top: 93px;
   height: fit-content;
-  padding: 5em;
-  padding-top: 7em;
-}
-
-article {
+  padding: 3em;
+  padding-top: 6em;
 }
 
 .introduction {
@@ -148,7 +161,7 @@ article {
 }
 
 .intro > h1 {
-  color: rgb(8, 51, 112);
+  color: rgb(8, 41, 86);
 }
 
 .intro > p > strong {
@@ -200,7 +213,6 @@ article {
   transition-duration: 0.5s;
 }
 
-
 .img > img {
   max-width: 100%;
   height: auto;
@@ -208,10 +220,13 @@ article {
   border: none;
 }
 
+.git {
+  margin-right: 3em;
+}
+
 .stack {
   display: flex;
   align-items: baseline;
-  
 }
 
 .stack > h3 {
@@ -273,16 +288,66 @@ article {
 .react {
   color: rgb(83, 193, 222);
 }
-.about-me {
-  width: 100%;
-  
-}
 
 #nav-btnClose {
   display: none;
 }
 
-/* end of main styles */
+.about-me {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 5em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me > div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 35%;
+}
+
+.write-up {
+  padding: 1em;
+  max-width: 30em;
+  align-self: center;
+}
+
+.write-up > strong {
+  color: rgb(15, 104, 226);
+  padding: 1em;
+}
+
+.write-up > h3 {
+  padding-left: 1em;
+  color: rgb(8, 41, 86);
+}
+
+.write-up > p {
+  padding: 1em;
+}
+
+.about-me {
+  position: relative;
+}
+
+.about-img {
+  width: 90%;
+  height: fit-content;
+}
+
+.about-img > img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  min-width: 400px;
+  max-width: 401px;
+}
+
+/* end of .main-1 styles */
 
 /* Media Querries */
 @media only screen and (max-width: 767px) {
@@ -324,7 +389,7 @@ article {
   .intro > h1 {
     padding: 0.3em;
   }
-  main {
+  .main-1 {
     margin-top: 95px;
     padding: 1em;
     height: fit-content;
@@ -348,6 +413,20 @@ article {
   .introduction::before {
     display: none;
   }
+  .about-me {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 5em;
+  }
+  .about-me > div {
+    width: 100%;
+  }
+  
+  .write-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -363,7 +442,7 @@ article {
   .intro > h1 {
     padding: 0.3em;
   }
-  main {
+  .main-1 {
     margin-top: 95px;
     padding: 1em;
     height: fit-content;
@@ -376,6 +455,22 @@ article {
   }
   .introduction::before {
     display: none;
+  }
+  .about-me {
+    flex-direction: row;
+    padding: 0;
+    padding-top: 5em;
+  }
+  .about-me > div {
+    width: 50%;
+  }
+  .write-img {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  .write-up {
+    text-align: left;
   }
 }
 
@@ -390,7 +485,22 @@ article {
   .introduction::before {
     display: none;
   }
-
+  .about-me {
+    flex-direction: row;
+    padding: 0;
+    padding-top: 5em;
+  }
+  .about-me > div {
+    width: 50%;
+  }
+  .write-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .write-up {
+    text-align: left;
+  }
 }
 
 /* end of media querries */
