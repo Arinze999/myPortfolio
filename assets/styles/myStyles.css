@@ -21,6 +21,10 @@ i {
   color: rgb(8, 41, 86);
 }
 
+html {
+  scroll-behavior:smooth;
+}
+
 /* header styles */
 header {
   position: fixed;
