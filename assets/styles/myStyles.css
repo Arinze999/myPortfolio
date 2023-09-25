@@ -15,6 +15,8 @@ body {
 p {
   font-size: 1.1em;
   color: rgb(85, 85, 100);
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 i {
@@ -22,7 +24,7 @@ i {
 }
 
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 /* header styles */
@@ -37,6 +39,8 @@ header {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   padding: 1em;
   background-color: white;
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 label {
@@ -59,13 +63,14 @@ nav > ul {
   display: flex;
   transition-property: all;
   transition-duration: 0.5s;
+  background-color: white;
 }
 nav > ul > li {
   padding: 1em;
-  background-color: white;
   margin-left: 0.5em;
+  font-size: large;
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 nav > ul > li > a {
   text-decoration: none;
@@ -80,15 +85,16 @@ nav > ul > li > a:hover {
 nav > ul > li > a::after {
   content: "";
   position: absolute;
-  background-color: rgb(15, 104, 226);
+  background-color: rgb(8, 41, 86);
   height: 0.15em;
   width: 0;
   left: 0;
   bottom: -0.5em;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 nav > ul > li > a:hover::after {
   width: 100%;
+  background-color: rgb(15, 104, 226);
 }
 
 #nav-btn {
@@ -107,12 +113,19 @@ nav > ul > li > a:hover::after {
 #mode {
   width: 50px;
   height: fit-content;
+  cursor: pointer;
+
 }
 
 #mode > i {
   margin-left: 10%;
   margin-right: 10%;
 }
+
+#mode > p {
+  color: rgb(8, 41, 86);
+}
+
 
 #light {
   display: none;
@@ -132,11 +145,13 @@ nav > ul > li > a:hover::after {
 /* .main-1 styles */
 
 .main-1 {
-  background-color: rgba(147, 184, 211, 0.1);
+  background-color: rgba(147, 184, 211, 0.2);
   margin-top: 93px;
   height: fit-content;
   padding: 3em;
   padding-top: 6em;
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .introduction {
@@ -159,17 +174,22 @@ nav > ul > li > a:hover::after {
   width: 50%;
 }
 
+.intro > h1 {
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
 .intro > p {
   padding-top: 1em;
   padding-bottom: 1em;
-}
-
-.intro > h1 {
-  color: rgb(8, 41, 86);
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .intro > p > strong {
   color: rgb(15, 104, 226);
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .intro > h1 {
@@ -187,7 +207,7 @@ nav > ul > li > a:hover::after {
   position: relative;
 }
 
-.introduction::before {
+.introductionMode::before {
   content: "";
   width: 50px;
   height: 50px;
@@ -202,7 +222,7 @@ nav > ul > li > a:hover::after {
   transition-duration: 0.5s;
 }
 
-.introduction::after {
+.introductionMode::after {
   content: "";
   width: 50px;
   height: 50px;
@@ -217,6 +237,36 @@ nav > ul > li > a:hover::after {
   transition-duration: 0.5s;
 }
 
+.introductionMode2::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  right: 100%;
+  top: 90%;
+  position: absolute;
+  border-radius: 10px;
+  /* border: 2px solid red; */
+  border-left: 0.5em solid rgb(202, 224, 239);
+  border-bottom: 0.5em solid rgb(202, 224, 239);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.introductionMode2::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  right: 5%;
+  top: -3%;
+  position: absolute;
+  border-radius: 10px;
+  /* border: 2px solid red; */
+  border-right: 0.5em solid rgb(202, 224, 239);
+  border-top: 0.5em solid rgb(202, 224, 239);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
 .img > img {
   max-width: 100%;
   height: auto;
@@ -224,8 +274,39 @@ nav > ul > li > a:hover::after {
   border: none;
 }
 
+.hi {
+  animation: wavingHand 2.6s linear infinite;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+@keyframes wavingHand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .git {
   margin-right: 3em;
+  text-decoration: none;
+}
+
+.upwork {
+  text-decoration: none;
+}
+
+.noshowLogo {
+  display: none;
+}
+
+.ShowLogo {
+  display: block;
 }
 
 .stack {
@@ -235,7 +316,6 @@ nav > ul > li > a:hover::after {
 
 .stack > h3 {
   padding: 0.5em;
-  border-right: 2px solid black;
 }
 
 .stack > ul {
@@ -305,6 +385,8 @@ nav > ul > li > a:hover::after {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .about-me > div {
@@ -332,6 +414,8 @@ nav > ul > li > a:hover::after {
 
 .write-up > p {
   padding: 1em;
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .about-me {
@@ -367,7 +451,7 @@ nav > ul > li > a:hover::after {
   }
   nav > ul > li {
     padding: 0.5em;
-    background-color: white;
+    background-color: inherit;
     margin: 0.5em;
   }
   .collapse {
@@ -407,8 +491,6 @@ nav > ul > li > a:hover::after {
     justify-content: center;
   }
   .stack > h3 {
-    border-right: none;
-    border-bottom: 2px solid black;
     margin-bottom: 1em;
   }
   .introduction::after {
@@ -425,7 +507,7 @@ nav > ul > li > a:hover::after {
   .about-me > div {
     width: 100%;
   }
-  
+
   .write-img {
     display: flex;
     justify-content: center;
@@ -507,4 +589,24 @@ nav > ul > li > a:hover::after {
   }
 }
 
-/* end of media querries */
+/* Dark mode styles */
+
+.darkmode-text-big {
+  color: rgb(202, 224, 239);
+}
+
+.banner {
+  color: rgb(8, 41, 86);
+}
+
+.darkmode-background {
+  background-color: rgba(8, 41, 86, 0.95);
+}
+
+.darkmode-p {
+  color: rgb(225, 225, 225);
+}
+
+.special-text-dark-mode {
+  color: white;
+}
