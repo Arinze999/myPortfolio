@@ -39,7 +39,7 @@ closeNavButton.addEventListener("click", () => {
 // Light and Dark Mode Settings
 
 LighDarkMode.addEventListener("click", () => {
-  if (Light.style.display == "none") {
+  if (Light.style.display !== "flex") {
     Light.style.display = "flex";
     Dark.style.display = "none";
     changeBackground.classList.add("darkmode-background");
