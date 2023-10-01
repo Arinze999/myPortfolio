@@ -25,6 +25,16 @@ const upWorkLogoDark = document.getElementById("upwork2");
 const changeHeaderColor = document.querySelector("header");
 const changeAboutColor = document.getElementById("about");
 const changeAboutParaColor = document.getElementById("about-para");
+const changeProjectsBackroundColor = document.getElementById("projects");
+const selectAllPdSmall = document.getElementsByClassName("pd-small");
+const changePdSmallColor = Array.from(selectAllPdSmall);
+const selectAllProjectCards = document.getElementsByClassName("projects-card");
+const changeProjectCardBg = Array.from(selectAllProjectCards);
+
+// Project Screenshots carousel Elements
+const selectAllProjectClasses =
+  document.getElementsByClassName("project-carousel");
+const projectScreenshotsCarousel = Array.from(selectAllProjectClasses);
 
 navButton.addEventListener("click", () => {
   navBar.classList.toggle("collapse");
@@ -68,6 +78,14 @@ LighDarkMode.addEventListener("click", () => {
     navBar.style.backgroundColor = "rgb(231,240,252)";
     changeAboutColor.style.backgroundColor = "rgb(231,240,252)";
     changeAboutParaColor.style.color = "rgb(8, 41, 86)";
+    changeProjectsBackroundColor.style.backgroundColor = "rgba(8, 41, 86, 0.95)";
+    changePdSmallColor.map((each) => {
+      each.style.color = "rgb(11, 11, 49)";
+      // each.style.color = "rgb(8, 41, 86)";
+    });
+    changeProjectCardBg.map((each) => {
+      each.style.background = "whitesmoke";
+    });
   } else {
     Dark.style.display = "flex";
     Light.style.display = "none";
@@ -97,5 +115,34 @@ LighDarkMode.addEventListener("click", () => {
     navBar.style.backgroundColor = "white";
     changeAboutColor.style.backgroundColor = "white";
     changeAboutParaColor.style.color = "rgb(85, 85, 100)";
+    changeProjectsBackroundColor.style.backgroundColor = "rgba(147, 184, 211, 0.2)";
+    changePdSmallColor.map((each) => {
+      each.style.color = "rgb(11, 11, 49)";
+    });
+    changeProjectCardBg.map((each) => {
+      each.style.background = "linear-gradient(to right, whitesmoke , rgba(147, 184, 211, 0))";
+    });
   }
+});
+
+// Project screenShots Carousel image change Function
+projectScreenshotsCarousel.map((each) => {
+  const inventoryScreenshotsSrc = [
+    "assets/images/projectScreenshots/inventoryScreenshots/inventoryHome.png",
+    "assets/images/projectScreenshots/inventoryScreenshots/inventoryCreateAccount.JPG",
+    "assets/images/projectScreenshots/inventoryScreenshots/inventoryLogin.JPG",
+    "assets/images/projectScreenshots/inventoryScreenshots/inventoryDashboard.png",
+    "assets/images/projectScreenshots/inventoryScreenshots/inventoryItemsAdd.png",
+    "assets/images/projectScreenshots/inventoryScreenshots/inventoryPurchaseAdd.png",
+    "assets/images/projectScreenshots/inventoryScreenshots/inventorySalesAdd.png",
+  ];
+
+  let currentSrc = 0;
+
+  function changeSrc() {
+    each.src = inventoryScreenshotsSrc[currentSrc];
+    currentSrc = (currentSrc + 1) % inventoryScreenshotsSrc.length;
+  }
+
+  setInterval(changeSrc, 4000);
 });
