@@ -78,7 +78,8 @@ LighDarkMode.addEventListener("click", () => {
     navBar.style.backgroundColor = "rgb(231,240,252)";
     changeAboutColor.style.backgroundColor = "rgb(231,240,252)";
     changeAboutParaColor.style.color = "rgb(8, 41, 86)";
-    changeProjectsBackroundColor.style.backgroundColor = "rgba(8, 41, 86, 0.95)";
+    changeProjectsBackroundColor.style.backgroundColor =
+      "rgba(8, 41, 86, 0.95)";
     changePdSmallColor.map((each) => {
       each.style.color = "rgb(11, 11, 49)";
       // each.style.color = "rgb(8, 41, 86)";
@@ -115,12 +116,14 @@ LighDarkMode.addEventListener("click", () => {
     navBar.style.backgroundColor = "white";
     changeAboutColor.style.backgroundColor = "white";
     changeAboutParaColor.style.color = "rgb(85, 85, 100)";
-    changeProjectsBackroundColor.style.backgroundColor = "rgba(147, 184, 211, 0.2)";
+    changeProjectsBackroundColor.style.backgroundColor =
+      "rgba(147, 184, 211, 0.2)";
     changePdSmallColor.map((each) => {
       each.style.color = "rgb(11, 11, 49)";
     });
     changeProjectCardBg.map((each) => {
-      each.style.background = "linear-gradient(to right, whitesmoke , rgba(147, 184, 211, 0))";
+      each.style.background =
+        "linear-gradient(to right, whitesmoke , rgba(147, 184, 211, 0))";
     });
   }
 });
