@@ -145,7 +145,7 @@ nav > ul > li > a:hover::after {
 .main-1 {
   background-color: rgba(147, 184, 211, 0.2);
   margin-top: 93px;
-  height: fit-content;
+  height: 100vh;
   padding: 3em;
   padding-top: 6em;
   transition-property: all;
@@ -167,7 +167,7 @@ nav > ul > li > a:hover::after {
 }
 
 .intro {
-  padding: 1em;
+  padding: 6em;
   flex-wrap: wrap;
   width: 50%;
 }
@@ -583,6 +583,7 @@ nav > ul > li > a:hover::after {
   .intro {
     width: 100%;
     margin-top: 0;
+    padding: 1em;
   }
   .intro > h1 {
     padding: 0.3em;
@@ -655,6 +656,32 @@ nav > ul > li > a:hover::after {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav > ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 100%;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    background-color: white;
+    top: 0;
+  }
+  nav > ul > li {
+    padding: 0.5em;
+    background-color: inherit;
+    margin: 0.5em;
+  }
+  .collapse {
+    left: 75%;
+  }
+  #nav-btn {
+    display: flex;
+    position: absolute;
+    right: 5%;
+  }
+  #nav-btnClose {
+    display: initial;
+  }
   .introduction {
     flex-direction: column-reverse;
     margin-left: 0;
@@ -663,6 +690,7 @@ nav > ul > li > a:hover::after {
   .intro {
     width: 100%;
     margin-top: 0;
+    padding: 1em;
   }
   .intro > h1 {
     padding: 0.3em;
@@ -727,6 +755,12 @@ nav > ul > li > a:hover::after {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .main-1 {
+    height: fit-content;
+  }
+  .intro {
+    padding: 1em;
+  }
   .introduction {
     margin-left: 0;
     margin-right: 0;
@@ -768,6 +802,15 @@ nav > ul > li > a:hover::after {
   }
   .proj-description {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1700px) {
+  /* .main-1 {
+    height: fit-content;
+  } */
+  .intro {
+    padding: 2.5em;
   }
 }
 
