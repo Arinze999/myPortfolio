@@ -482,11 +482,11 @@ nav > ul > li > a:hover::after {
   border-radius: 20px;
   margin-bottom: 2em;
   /* background-color: whitesmoke; */
-  box-shadow: -1px 1px 4px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: -1px 1px 4px 3px rgba(0, 0, 0, 0.05);
 }
 
 .projects-card {
-  background: linear-gradient(to right, whitesmoke, rgba(147, 184, 211, 0));
+  background: linear-gradient(to left, whitesmoke, rgba(147, 184, 211, 0));
   /* background: linear-gradient(to right, rgb(151, 179, 194) , rgb(21, 55, 102)); */
 }
 
@@ -497,7 +497,7 @@ nav > ul > li > a:hover::after {
   overflow-y: hidden;
   overflow-x: hidden;
   border-radius: 20px;
-  box-shadow: -1px 1px 4px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: -1px 1px 4px 3px rgba(0, 0, 0, 0.08);
 }
 
 .pd-title {
