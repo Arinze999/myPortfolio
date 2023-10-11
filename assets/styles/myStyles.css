@@ -502,6 +502,7 @@ nav > ul > li > a:hover::after {
 
 .pd-title {
   color: rgb(25, 25, 65);
+  white-space: nowrap;
 }
 
 .pd-small {
@@ -645,13 +646,17 @@ nav > ul > li > a:hover::after {
     padding-top: 5em;
   }
 
+  .projects-card {
+    background: linear-gradient(to top, whitesmoke, rgba(147, 184, 211, 0));
+  }
+
   #projects > div {
     width: 100%;
     flex-direction: column;
     border-radius: 10px;
   }
   .project-screenshot-div {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     border-radius: 10px;
     height: 10em;
@@ -746,6 +751,11 @@ nav > ul > li > a:hover::after {
     flex-direction: column;
     border-radius: 10px;
   }
+
+  .projects-card {
+    background: linear-gradient(to top, whitesmoke, rgba(147, 184, 211, 0));
+  }
+
   .project-screenshot-div {
     width: 100%;
     max-width: 600px;
