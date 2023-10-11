@@ -657,10 +657,10 @@ nav > ul > li > a:hover::after {
     border-radius: 10px;
   }
   .project-screenshot-div {
-    width: 100%;
+    width: 95%;
     max-width: 400px;
     border-radius: 10px;
-    height: 10em;
+    height: 9em;
   }
   .project-screenshot-div > img {
     width: 100%;
