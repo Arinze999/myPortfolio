@@ -521,11 +521,12 @@ nav > ul > li > a:hover::after {
 .to-view {
   margin-top: 2em;
   font-weight: 600;
+  display: flex;
+  justify-content: space-around;
 }
 
 .to-view > a {
   cursor: pointer;
-  margin-right: 2em;
   text-decoration: none;
   color: inherit;
 }
