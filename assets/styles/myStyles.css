@@ -172,7 +172,6 @@ nav > ul > li > a:hover::after {
   width: 50%;
 }
 
-
 .intro > h1 {
   transition-property: all;
   transition-duration: 0.3s;
@@ -459,7 +458,7 @@ nav > ul > li > a:hover::after {
 .project-header {
   /* align-items: start;
   justify-content: start; */
-  text-align: start;
+  text-align: center;
   padding-bottom: 1em;
   color: blue;
   width: 70%;
@@ -467,7 +466,7 @@ nav > ul > li > a:hover::after {
 
 .project-subtitle {
   width: 70%;
-  text-align: start;
+  text-align: center;
   font-size: larger;
   font-weight: 600;
   margin-bottom: 3em;
@@ -475,7 +474,7 @@ nav > ul > li > a:hover::after {
 
 #projects > div {
   padding: 2em;
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -493,7 +492,8 @@ nav > ul > li > a:hover::after {
 
 .project-screenshot-div {
   width: 60%;
-  height: 16em;
+  max-width: 500px;
+  height: 13.5em;
   overflow-y: hidden;
   overflow-x: hidden;
   border-radius: 20px;
@@ -501,7 +501,7 @@ nav > ul > li > a:hover::after {
 }
 
 .pd-title {
-  color: rgb(25, 25, 65) ;
+  color: rgb(25, 25, 65);
 }
 
 .pd-small {
@@ -514,9 +514,25 @@ nav > ul > li > a:hover::after {
   box-shadow: -1px -1px 2px 1px rgba(0, 0, 0, 0.1);
   padding: 0.5em;
   border-radius: 10px;
+  white-space: nowrap;
 }
 
+.to-view {
+  margin-top: 2em;
+  font-weight: 600;
+}
 
+.to-view > a {
+  cursor: pointer;
+  margin-right: 2em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.to-view > a:hover > i,
+.to-view > a:hover {
+  color: blue;
+}
 
 /* .project-screenshot-div:hover > img {
   transform: translateY(-20%);
@@ -635,9 +651,10 @@ nav > ul > li > a:hover::after {
     border-radius: 10px;
   }
   .project-screenshot-div {
-    width: 100%;
+    width: 90%;
+    max-width: 400px;
     border-radius: 10px;
-    height: 9em;
+    height: 10em;
   }
   .project-screenshot-div > img {
     width: 100%;
@@ -645,12 +662,8 @@ nav > ul > li > a:hover::after {
   .proj-description {
     width: 100%;
   }
-  .project-header {
-    text-align: center;
-  }
-  
+
   .project-subtitle {
-    text-align: center;
     margin-bottom: 2em;
   }
 }
@@ -735,6 +748,7 @@ nav > ul > li > a:hover::after {
   }
   .project-screenshot-div {
     width: 100%;
+    max-width: 600px;
     border-radius: 10px;
     height: 16.5em;
   }
@@ -744,12 +758,8 @@ nav > ul > li > a:hover::after {
   .proj-description {
     width: 100%;
   }
-  .project-header {
-    text-align: center;
-  }
-  
+
   .project-subtitle {
-    text-align: center;
     margin-bottom: 2em;
   }
 }
@@ -788,14 +798,15 @@ nav > ul > li > a:hover::after {
     text-align: left;
   }
   #projects > div {
-    width: 100%;
+    width: 90%;
     flex-direction: row;
     border-radius: 10px;
   }
   .project-screenshot-div {
     width: 60%;
+    max-width: 500px;
     border-radius: 10px;
-    height: 15em;
+    height: 13em;
   }
   .project-screenshot-div > img {
     width: 100%;
