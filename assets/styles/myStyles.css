@@ -12,6 +12,33 @@ body {
   padding: 0;
 }
 
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 184, 211, 0.9); /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(8, 41, 86); /* Color of the scrollbar thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-track-piece:start {
+  margin-top: 5px; /* Adjust top margin for the track */
+}
+
+::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 5px; /* Adjust bottom margin for the track */
+}
+
+
 p {
   font-size: 1.1em;
   color: rgb(85, 85, 100);
@@ -395,6 +422,10 @@ nav > ul > li > a:hover::after {
   transition-property: all;
   transition-duration: 0.3s;
 }
+#about-para {
+  transition-property: all;
+  transition-duration: 1.5s;
+}
 
 .about-me > div {
   display: flex;
@@ -560,7 +591,53 @@ nav > ul > li > a:hover::after {
   padding: 1em;
 }
 
-/* end of .main-1 styles */
+/* contact styles */
+#contact {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+#contact h3, #contact h4 , #contact p {
+  padding: 1rem;
+}
+
+#contact h4 {
+  color: rgb(8, 51, 112);
+}
+
+#contact h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(8, 51, 112);
+  white-space: nowrap;
+}
+
+#contact a {
+  text-decoration: none;
+  font-size: large;
+  color: rgb(32, 158, 241);
+}
+
+#contact p {
+  font-size: x-large;
+  color: rgb(8, 51, 112);
+}
+
+#contact a i {
+  color: rgb(32, 158, 241);
+}
+
+#contact div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Media Querries */
 @media only screen and (max-width: 767px) {
@@ -856,4 +933,28 @@ nav > ul > li > a:hover::after {
 
 .special-text-dark-mode {
   color: white;
+}
+
+/* animations */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }

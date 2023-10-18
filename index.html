@@ -37,7 +37,7 @@
 
     <main>
       <div class="main-1" id="home">
-        <section class="introduction introductionMode">
+        <section class="introduction introductionMode fade-in" data-animated="false">
           <div class="intro">
             <h1 class="banner">
               Front-End Web Developer
@@ -65,7 +65,7 @@
             </div>
           </section>
         </section>
-        <section id="tech-stack" class="stack-section">
+        <section id="tech-stack" class="stack-section fade-in-bottom">
           <div class="stack">
             <h3>Tech Stack</h3>
             <ul>
@@ -80,19 +80,19 @@
         </section>
       </div>
       <section class="about-me" id="about">
-        <div class="write-img">
+        <div class="write-img fade-in-left">
           <div class="about-img">
             <img src="assets\images\pexels-lukas-574073.jpg" alt="">
           </div>
         </div>
         <div class="write-up">
-          <strong>
+          <strong class="fade-in-right">
             ABOUT ME
           </strong>
-          <h3>
+          <h3 class="fade-in-right">
             A Creative and Dedicated Front-End Developer based in Imo, NIGERIA.
           </h3>
-          <p id="about-para">
+          <p id="about-para" class="fade-in-bottom">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Provident natus excepturi quidem? Dolorum error a nisi illo iusto ipsa ratione,
              eaque odit inventore quisquam itaque earum unde! Quidem, iste perspiciatis.
@@ -105,10 +105,10 @@
       <section id="projects">
           <h4 class="project-header">PROJECTS</h4>
           <p class="project-subtitle banner">
-            Each project, a distinct masterpiece in the artistry of development, stands alone
+            Each project, is a distinct masterpiece in the artistry of development
             <!-- <img src="assets\images\icons8-tech-100.png" alt=""> -->
           </p>
-        <div class="projects-card">
+        <div class="projects-card fade-in-left">
           <div class="project-screenshot-div">
             <img class="project-carousel" src="assets/images/projectScreenshots/inventoryScreenshots/inventoryHome.png" alt="carousel">
           </div>
@@ -131,10 +131,39 @@
               </small>
           </div>
         </div>
-        <div>
-          <h4 class="pd-title">coming very soon!</h4>
+        <div class="projects-card fade-in-right">
+          <div class="project-screenshot-div">
+            <img src="assets\images\projectScreenshots\inventoryScreenshots\carbuddy\carbuddy.png" alt="carousel">
+          </div>
+          <div class="proj-description">
+            <h4 class="pd-title">Car Buddy <img src="assets\images\icons8-inventory-16.png" alt="ivt.img"></h4>
+            <small class="pd-small">  
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Provident natus excepturi quidem? Dolorum error a nisi illo iusto ipsa ratione,
+               eaque odit inventore quisquam itaque earum unde! Quidem, iste perspiciatis.<br><br>
+               <span class="pd-span">
+                <strong>HTML</strong>
+                <strong>CSS</strong>
+                <strong>Javascript</strong>
+               </span>
+               <div class="to-view">
+                <a href="https://github.com/Arinze999/carRental" target="_blank">Code <i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="https://arinze999.github.io/carRental/" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i></a>
+              </div>
+              </small>
+          </div>
         </div>
       </section>
+
+      <section id="contact">
+        <div>
+            <h4>CONTACT</h4>
+            <h3>Feel free to send a  Message!<img src="assets\images\icons8-backhand-index-pointing-down-48.png" alt=""></h3>
+            <a href="mailto:akanagapyt@gmail.com"><i class="fa-solid fa-envelope fa-lg"></i> akanagapyt@gmail.com</a>
+            <p><i class="fa-solid fa-location-dot fa-lg"></i> Owerri, Nigeria</p>
+        </div>
+      </section>
+
     </main>
     <script
       src="https://kit.fontawesome.com/1b0619be22.js"

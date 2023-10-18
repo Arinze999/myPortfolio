@@ -30,6 +30,94 @@ const selectAllPdSmall = document.getElementsByClassName("pd-small");
 const changePdSmallColor = Array.from(selectAllPdSmall);
 const selectAllProjectCards = document.getElementsByClassName("projects-card");
 const changeProjectCardBg = Array.from(selectAllProjectCards);
+const changeContactBg = document.getElementById("contact");
+
+// animations
+const elements = document.querySelectorAll('.fade-in');
+const elementsLeft = document.querySelectorAll('.fade-in-left');
+const elementsRight = document.querySelectorAll('.fade-in-right');
+const elementsBottom = document.querySelectorAll('.fade-in-bottom');
+
+// fade in
+function fadeInElements() {
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const isAnimated = element.getAttribute('data-animated') === 'true';
+
+    if (!isAnimated && elementTop < window.innerHeight) {
+      element.style.opacity = 1;
+      element.setAttribute('data-animated', 'true');
+    }
+  });
+}
+
+// Initial check for elements in the viewport
+fadeInElements();
+
+// Listen for scroll events to trigger the animation
+window.addEventListener('scroll', fadeInElements);
+
+// fade in left
+function fadeInElementsLeft() {
+  elementsLeft.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const isAnimated = element.getAttribute('data-animated') === 'true';
+
+    if (!isAnimated && elementTop < window.innerHeight) {
+      element.style.opacity = 1;
+      element.style.transform = 'translateX(0)'; // Move back to normal position
+      element.setAttribute('data-animated', 'true');
+    }
+  });
+}
+
+// Initial check for elements in the viewport
+fadeInElementsLeft();
+
+// Listen for scroll events to trigger the animation
+window.addEventListener('scroll', fadeInElementsLeft);
+
+// fade in right
+function fadeInElementsRight() {
+  elementsRight.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const isAnimated = element.getAttribute('data-animated') === 'true';
+
+    if (!isAnimated && elementTop < window.innerHeight) {
+      element.style.opacity = 1;
+      element.style.transform = 'translateX(0)'; // Move back to normal position
+      element.setAttribute('data-animated', 'true');
+    }
+  });
+}
+
+// Initial check for elements in the viewport
+fadeInElementsRight();
+
+// Listen for scroll events to trigger the animation
+window.addEventListener('scroll', fadeInElementsRight);
+
+// fade in bottom
+function fadeInElementsBottom() {
+  elementsBottom.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const isAnimated = element.getAttribute('data-animated') === 'true';
+
+    if (!isAnimated && elementTop < window.innerHeight) {
+      element.style.opacity = 1;
+      element.style.transform = 'translateX(0)'; // Move back to normal position
+      element.setAttribute('data-animated', 'true');
+    }
+  });
+}
+
+// Initial check for elements in the viewport
+fadeInElementsBottom();
+
+// Listen for scroll events to trigger the animation
+window.addEventListener('scroll', fadeInElementsBottom);
+
+
 
 // Project Screenshots carousel Elements
 const selectAllProjectClasses =
@@ -87,6 +175,7 @@ LighDarkMode.addEventListener("click", () => {
     changeProjectCardBg.map((each) => {
       each.style.background = "whitesmoke";
     });
+    changeContactBg.style.backgroundColor = "rgb(231,240,252)";
   } else {
     Dark.style.display = "flex";
     Light.style.display = "none";
@@ -123,8 +212,9 @@ LighDarkMode.addEventListener("click", () => {
     });
     changeProjectCardBg.map((each) => {
       each.style.background =
-        "linear-gradient(to right, whitesmoke , rgba(147, 184, 211, 0))";
+        "linear-gradient(to left, whitesmoke , rgba(147, 184, 211, 0))";
     });
+    changeContactBg.style.backgroundColor = "white";
   }
 });
 
