@@ -12,6 +12,11 @@ body {
   padding: 0;
 }
 
+main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar track */
