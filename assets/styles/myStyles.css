@@ -466,29 +466,28 @@ nav > ul > li > a:hover::after {
 
 .about-me > div {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   width: 35%;
 }
 
 .write-up {
-  padding: 1em;
+  padding: 0;
   max-width: 30em;
   align-self: center;
 }
 
 .write-up > strong {
   color: rgb(15, 104, 226);
-  padding: 1em;
+  padding-bottom: 1em;
 }
 
 .write-up > h3 {
-  padding-left: 1em;
+  padding-bottom: 1em;
   color: rgb(8, 41, 86);
 }
 
 .write-up > p {
-  padding: 1em;
+  font-size: medium;
   transition-property: all;
   transition-duration: 0.3s;
 }
@@ -770,9 +769,10 @@ nav > ul > li > a:hover::after {
     flex-direction: column;
     padding: 0;
     padding-top: 5em;
+    padding-bottom: 3rem;
   }
   .about-me > div {
-    width: 100%;
+    width: 90%;
   }
 
   .write-img {
@@ -809,6 +809,7 @@ nav > ul > li > a:hover::after {
 
   .project-subtitle {
     margin-bottom: 2em;
+    width: 100%;
   }
 }
 
