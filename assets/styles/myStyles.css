@@ -776,6 +776,7 @@ nav > ul > li > a:hover::after {
   }
 
   .write-img {
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -874,6 +875,7 @@ nav > ul > li > a:hover::after {
     flex-direction: row;
     padding: 0;
     padding-top: 5em;
+    padding-bottom: 3rem;
   }
   .about-me > div {
     width: 50%;
