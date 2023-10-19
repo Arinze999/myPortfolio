@@ -776,10 +776,9 @@ nav > ul > li > a:hover::after {
   }
 
   .write-img {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
   }
   #projects {
     padding: 1em;
