@@ -18,7 +18,7 @@ main {
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
   padding: 5rem;
   padding-left: 15rem;
   padding-right: 15rem;
@@ -643,7 +643,7 @@ nav > ul > li > a:hover::after {
 }
 
 #contact h4 {
-  color: rgb(8, 51, 112);
+  color: rgb(34,139,230);
 }
 
 #contact h3 {
@@ -657,7 +657,7 @@ nav > ul > li > a:hover::after {
 #contact a {
   text-decoration: none;
   font-size: large;
-  color: rgb(32, 158, 241);
+  color: rgb(8, 51, 112);
 }
 
 #contact p {
@@ -665,15 +665,30 @@ nav > ul > li > a:hover::after {
   color: rgb(8, 51, 112);
 }
 
-#contact a i {
-  color: rgb(32, 158, 241);
-}
-
 #contact div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
+  color: rgb(15, 123, 196);
+}
+
+.ins {
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0px 1px 9px -4px rgba(0,0,0,0.75);
+}
+
+.c-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.bluey {
+  color: rgb(4, 72, 160);
 }
 
 /* Media Querries */

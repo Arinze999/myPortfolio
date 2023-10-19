@@ -31,6 +31,8 @@ const changePdSmallColor = Array.from(selectAllPdSmall);
 const selectAllProjectCards = document.getElementsByClassName("projects-card");
 const changeProjectCardBg = Array.from(selectAllProjectCards);
 const changeContactBg = document.getElementById("contact");
+const bluey = document.querySelectorAll(".bluey");
+const subHead = Array.from(bluey);
 
 // animations
 const elements = document.querySelectorAll('.fade-in');
@@ -176,6 +178,9 @@ LighDarkMode.addEventListener("click", () => {
       each.style.background = "whitesmoke";
     });
     changeContactBg.style.backgroundColor = "rgb(231,240,252)";
+    subHead.map((each) => {
+      each.style.color = "whitesmoke";
+    });
   } else {
     Dark.style.display = "flex";
     Light.style.display = "none";
@@ -215,6 +220,9 @@ LighDarkMode.addEventListener("click", () => {
         "linear-gradient(to left, whitesmoke , rgba(147, 184, 211, 0))";
     });
     changeContactBg.style.backgroundColor = "white";
+    subHead.map((each) => {
+      each.style.color = "rgb(4, 72, 160)";
+    });
   }
 });
 
