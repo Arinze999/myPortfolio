@@ -56,6 +56,16 @@ footer div h4 {
   width: 12px; /* Width of the scrollbar track */
 }
 
+.icons {
+  width: 48px;
+  height: auto;
+}
+
+.icon-small {
+  width: 16px;
+  height: auto;
+}
+
 ::-webkit-scrollbar-thumb {
   background: rgba(147, 184, 211, 0.9); /* Color of the scrollbar thumb */
   border-radius: 6px; /* Rounded corners */
@@ -372,6 +382,7 @@ nav > ul > li > a:hover::after {
 
 .upwork {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .noshowLogo {
