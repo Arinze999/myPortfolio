@@ -35,20 +35,28 @@ const bluey = document.querySelectorAll(".bluey");
 const subHead = Array.from(bluey);
 
 // animations
-const elements = document.querySelectorAll('.fade-in');
-const elementsLeft = document.querySelectorAll('.fade-in-left');
-const elementsRight = document.querySelectorAll('.fade-in-right');
-const elementsBottom = document.querySelectorAll('.fade-in-bottom');
+const elements = document.querySelectorAll(".fade-in");
+const elementsLeft = document.querySelectorAll(".fade-in-left");
+const elementsRight = document.querySelectorAll(".fade-in-right");
+const elementsBottom = document.querySelectorAll(".fade-in-bottom");
+
+//about me image carousel elements
+const arrayButtons = document.querySelector(".skip-btn");
+const imgCollection = arrayButtons.getElementsByTagName("button");
+const imgBtn = Array.from(imgCollection);
+const arrayImages = document.querySelector(".about-img");
+const arrayImagesCollection = arrayImages.getElementsByTagName("img");
+const imageCarousel = Array.from(arrayImagesCollection);
 
 // fade in
 function fadeInElements() {
   elements.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
-    const isAnimated = element.getAttribute('data-animated') === 'true';
+    const isAnimated = element.getAttribute("data-animated") === "true";
 
     if (!isAnimated && elementTop < window.innerHeight) {
       element.style.opacity = 1;
-      element.setAttribute('data-animated', 'true');
+      element.setAttribute("data-animated", "true");
     }
   });
 }
@@ -57,18 +65,18 @@ function fadeInElements() {
 fadeInElements();
 
 // Listen for scroll events to trigger the animation
-window.addEventListener('scroll', fadeInElements);
+window.addEventListener("scroll", fadeInElements);
 
 // fade in left
 function fadeInElementsLeft() {
   elementsLeft.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
-    const isAnimated = element.getAttribute('data-animated') === 'true';
+    const isAnimated = element.getAttribute("data-animated") === "true";
 
     if (!isAnimated && elementTop < window.innerHeight) {
       element.style.opacity = 1;
-      element.style.transform = 'translateX(0)'; // Move back to normal position
-      element.setAttribute('data-animated', 'true');
+      element.style.transform = "translateX(0)"; // Move back to normal position
+      element.setAttribute("data-animated", "true");
     }
   });
 }
@@ -77,18 +85,18 @@ function fadeInElementsLeft() {
 fadeInElementsLeft();
 
 // Listen for scroll events to trigger the animation
-window.addEventListener('scroll', fadeInElementsLeft);
+window.addEventListener("scroll", fadeInElementsLeft);
 
 // fade in right
 function fadeInElementsRight() {
   elementsRight.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
-    const isAnimated = element.getAttribute('data-animated') === 'true';
+    const isAnimated = element.getAttribute("data-animated") === "true";
 
     if (!isAnimated && elementTop < window.innerHeight) {
       element.style.opacity = 1;
-      element.style.transform = 'translateX(0)'; // Move back to normal position
-      element.setAttribute('data-animated', 'true');
+      element.style.transform = "translateX(0)"; // Move back to normal position
+      element.setAttribute("data-animated", "true");
     }
   });
 }
@@ -97,18 +105,18 @@ function fadeInElementsRight() {
 fadeInElementsRight();
 
 // Listen for scroll events to trigger the animation
-window.addEventListener('scroll', fadeInElementsRight);
+window.addEventListener("scroll", fadeInElementsRight);
 
 // fade in bottom
 function fadeInElementsBottom() {
   elementsBottom.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
-    const isAnimated = element.getAttribute('data-animated') === 'true';
+    const isAnimated = element.getAttribute("data-animated") === "true";
 
     if (!isAnimated && elementTop < window.innerHeight) {
       element.style.opacity = 1;
-      element.style.transform = 'translateX(0)'; // Move back to normal position
-      element.setAttribute('data-animated', 'true');
+      element.style.transform = "translateX(0)"; // Move back to normal position
+      element.setAttribute("data-animated", "true");
     }
   });
 }
@@ -117,13 +125,12 @@ function fadeInElementsBottom() {
 fadeInElementsBottom();
 
 // Listen for scroll events to trigger the animation
-window.addEventListener('scroll', fadeInElementsBottom);
-
-
+window.addEventListener("scroll", fadeInElementsBottom);
 
 // Project Screenshots carousel Elements
-const selectAllProjectClasses =
-  document.getElementsByClassName("project-carousel");
+const selectAllProjectClasses = document.getElementsByClassName(
+  "project-carousel"
+);
 const projectScreenshotsCarousel = Array.from(selectAllProjectClasses);
 
 navButton.addEventListener("click", () => {
@@ -246,4 +253,13 @@ projectScreenshotsCarousel.map((each) => {
   }
 
   setInterval(changeSrc, 4000);
+});
+
+// image carousel function
+imgBtn.map((each) => {
+  each.addEventListener("click", () => {
+    imageCarousel.map((each) => {
+      each.classList.toggle("skip");
+    });
+  });
 });
