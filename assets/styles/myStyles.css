@@ -527,11 +527,11 @@ nav > ul > li > a:hover::after {
 }
 
 .skip {
-  opacity: 0.05;
-  transform: scale(0.1);
+  transform: scale(0.05);
+  z-index: -1;
 }
 
-.about-img > img {
+.place2 {
   transition: all 0.5s ease-in-out;
   width: 100%;
   height: auto;
@@ -541,6 +541,18 @@ nav > ul > li > a:hover::after {
   opacity: 0.8;
   position: absolute;
   top: 5%;
+}
+
+.place {
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  min-width: 350px;
+  max-width: 370px;
+  opacity: 0.8;
+  position: absolute;
+  top: 25%;
 }
 
 .skip-btn > button {
@@ -553,6 +565,10 @@ nav > ul > li > a:hover::after {
   background-color:rgb(55,72,160);
   border: none;
   box-shadow: 0px 3px 11px -2px rgba(0,0,0,0.75);
+}
+
+.skip-btn > button > i {
+  color: white;
 }
 
 .skip-btn > button:hover {
