@@ -64,6 +64,7 @@ footer div h4 {
 .icon-small {
   width: 16px;
   height: auto;
+  transform: translateY(2px);
 }
 
 ::-webkit-scrollbar-thumb {
