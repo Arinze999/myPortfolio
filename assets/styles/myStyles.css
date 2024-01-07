@@ -699,6 +699,10 @@ nav > ul > li > a:hover::after {
   padding: 1em;
 }
 
+.mz {
+  background-color: rgb(80,6,33);
+}
+
 /* contact styles */
 #contact {
   padding: 5rem;
