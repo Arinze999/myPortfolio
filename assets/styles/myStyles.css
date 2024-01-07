@@ -534,22 +534,22 @@ nav > ul > li > a:hover::after {
 
 .place2 {
   transition: all 0.5s ease-in-out;
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 20px;
-  min-width: 350px;
+  min-width: 250px;
   max-width: 370px;
   opacity: 0.8;
   position: absolute;
-  top: 5%;
+  top: 25%;
 }
 
 .place {
   transition: all 0.5s ease-in-out;
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 20px;
-  min-width: 350px;
+  min-width: 250px;
   max-width: 370px;
   opacity: 0.8;
   position: absolute;
@@ -641,7 +641,7 @@ nav > ul > li > a:hover::after {
 
 .pd-title {
   color: rgb(25, 25, 65);
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .pd-small {
